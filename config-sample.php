@@ -17,6 +17,7 @@ define('ACCESS_TOKEN_SECRET', '');
 
 //Webcam configs
 
-define('WEBCAM_URL', 'http://atomik.kerrycoco.ie/webcams/webcam_ashe.asp');
+define('WEBCAM_URL', '');
 define('TMP_IMG', 'tmp/img.jpg');
+define('TWEET_TEXT','');
 
