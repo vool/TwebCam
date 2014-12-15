@@ -20,7 +20,7 @@ $twitter = new Twitter(CONSUMER_KEY, CONSUMER_SECRET, ACCESS_TOKEN, ACCESS_TOKEN
 
 try {
 	//tweet tweet
-	$tweet = $twitter -> send('', TMP_IMG);
+	$tweet = $twitter -> send('#Tralee #Kerry', TMP_IMG);
 	
 	// remove the cam image 
 	unlink(TMP_IMG);
