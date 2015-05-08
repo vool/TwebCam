@@ -1,10 +1,13 @@
-DennyStreetCam
-==============
+# TWebCam
 
-Tweeting ~~up to the minute~~ updates every 15 minutes from the webcam at the Ashe Memorial Hall, Denny street, Tralee
+A simple script for posting webcam (or any other) images to a Twitter feel at regular intervals.
 
-https://twitter.com/dennystreetcam
+## Accounts
 
-Now also 
+Currently tweeting updates every ~~15 minutes~~ hour from the webcams at:
 
-https://twitter.com/InchydoneyCam
+* Ashe Memorial Hall, Denny street, Tralee  
+[@DennyStreetCam](https://twitter.com/dennystreetcam)
+
+* Inchydoney Beach, Clonakilty.   
+[@InchydoneyCam](https://twitter.com/InchydoneyCam)
