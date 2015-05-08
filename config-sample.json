@@ -1,0 +1,28 @@
+{
+	"tmp_img": "tmp/img.jpg",
+	"account": [
+		{
+			"handle": "",
+			"webcam_url": "",
+			"tweet_text": "",
+			"keys": {
+				"consumer_key": "",
+				"consumer_secret": "",
+				"access_token": "",
+				"access_token_secret": ""
+			},
+			"hashtags": ["#Some", "#Tags"]
+		}, {
+			"handle": "",
+			"webcam_url": "",
+			"tweet_text": "",
+			"keys": {
+				"consumer_key": "",
+				"consumer_secret": "",
+				"access_token": "",
+				"access_token_secret": ""
+			},
+			"hashtags": ["#Some", "#Tags"]
+		}
+	]
+}
