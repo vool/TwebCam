@@ -1,17 +1,18 @@
 <?php
 
-// require config
+// I can haz configs
 $config = json_decode(file_get_contents('config.json'), true);
 
+// Check secret
 if (isset($_GET['secret']) && $_GET['secret'] == $config['secret']) {
 	
 	// require twitter class 
 	require_once 'vendor/dg/twitter-php/src/twitter.class.php';
 
-	// settings
+	// temp image file
 	$tmp_img = $config['tmp_img'];
 
-
+	// loop through accounts
 	foreach ($config['account'] as $t) {
 
 		// new twitter
@@ -26,17 +27,18 @@ if (isset($_GET['secret']) && $_GET['secret'] == $config['secret']) {
 		curl_close($ch);
 		fclose($fp);
 	
-		// hashtags
+		// process hashtags
 		$tags = implode( ' ', $t['hashtags'] );
 	
+		// set tweet bodycontent
 		$tweet_text = $t['tweet_text']. ' '.$tags;
 	
 
 	try {
-			//tweet tweet
+			//tweet da tweet
 			$tweet = $twitter -> send($tweet_text, $tmp_img);
 
-			// remove the cam image
+			// remove the temp image
 			unlink($tmp_img);
 
 		} catch (TwitterException $e) {
@@ -46,7 +48,7 @@ if (isset($_GET['secret']) && $_GET['secret'] == $config['secret']) {
 	}
 
 } else {
-	
+	// no / incorrect secret
 	echo "Can't keep a secret ?";
 
 }
