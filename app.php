@@ -3,14 +3,45 @@
 // I can haz configs
 $config = json_decode(file_get_contents('config.json'), true);
 
+//set default mode
+$mode = "update";
+
+// temp image file
+$tmp_img = $config['tmp_img'];
+
 // Check secret
 if (isset($_GET['secret']) && $_GET['secret'] == $config['secret']) {
-	
-	// require twitter class 
+
+	// require twitter class
 	require_once 'vendor/dg/twitter-php/src/twitter.class.php';
 
-	// temp image file
-	$tmp_img = $config['tmp_img'];
+	// check mode
+	if (isset($_GET['mode'])) {
+
+		$mode = $_GET['mode'];
+
+	}
+
+	switch($mode) {
+		case 'update' :
+			doUpdate();
+
+			break;
+	}
+
+} else {
+	// no / incorrect secret
+	echo "Can't keep a secret ?";
+
+}
+
+/*
+ * Update feed with image
+ */
+
+function doUpdate() {
+
+	Global $config;
 
 	// loop through accounts
 	foreach ($config['account'] as $t) {
@@ -26,15 +57,14 @@ if (isset($_GET['secret']) && $_GET['secret'] == $config['secret']) {
 		curl_exec($ch);
 		curl_close($ch);
 		fclose($fp);
-	
-		// process hashtags
-		$tags = implode( ' ', $t['hashtags'] );
-	
-		// set tweet bodycontent
-		$tweet_text = $t['tweet_text']. ' '.$tags;
-	
 
-	try {
+		// process hashtags
+		$tags = implode(' ', $t['hashtags']);
+
+		// set tweet bodycontent
+		$tweet_text = $t['tweet_text'] . ' ' . $tags;
+
+		try {
 			//tweet da tweet
 			$tweet = $twitter -> send($tweet_text, $tmp_img);
 
@@ -46,9 +76,5 @@ if (isset($_GET['secret']) && $_GET['secret'] == $config['secret']) {
 		}
 
 	}
-
-} else {
-	// no / incorrect secret
-	echo "Can't keep a secret ?";
 
 }
