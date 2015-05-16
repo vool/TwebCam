@@ -160,7 +160,7 @@ function doCheck() {
 
 						// set tweet bodycontent
 						//$tweet_text = $t['tweet_text'] . ' ' . $tags;
-						$tweet_text = implode(' ', $targets) .' '.$t['tweet_text'];
+						$tweet_text = "Here ya go ".implode(' ', $targets) .' '.$t['tweet_text'];
 
 						try {
 							//tweet da tweet
