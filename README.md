@@ -11,3 +11,10 @@ Currently tweeting updates every ~~15 minutes~~ hour from the webcams at:
 
 * Inchydoney Beach, Clonakilty.   
 [@InchydoneyCam](https://twitter.com/InchydoneyCam)
+
+
+## Interactions
+
+### #Cheese
+
+If you tweet to the account with the hashtag #cheese it will post you back the current picture.
