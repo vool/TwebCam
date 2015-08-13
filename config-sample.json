@@ -6,6 +6,7 @@
 			"handle": "",
 			"webcam_url": "",
 			"tweet_text": "",
+			"active": true,
 			"keys": {
 				"consumer_key": "",
 				"consumer_secret": "",
@@ -17,6 +18,7 @@
 			"handle": "",
 			"webcam_url": "",
 			"tweet_text": "",
+			"active": false,
 			"keys": {
 				"consumer_key": "",
 				"consumer_secret": "",
