@@ -1,6 +1,7 @@
 {
 	"secret": "",
 	"tmp_img": "tmp/img.jpg",
+	"status_log": "tmp/status_log.txt",
 	"account": [
 		{
 			"handle": "",
