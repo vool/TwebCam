@@ -1,5 +1,6 @@
 {
     "require": {
-        "dg/twitter-php": "~3.4"
+        "dg/twitter-php": "~3.4",
+        "abraham/twitteroauth": "^0.6.4"
     }
 }
