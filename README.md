@@ -12,6 +12,9 @@ Currently tweeting updates every ~~15 minutes~~ hour from the webcams at:
 * Inchydoney Beach, Clonakilty.   
 [@InchydoneyCam](https://twitter.com/InchydoneyCam)
 
+* Tramore Beach, Waterford.   
+[@TramoreCam](https://twitter.com/TramoreCam)
+
 
 ## Interactions
 
